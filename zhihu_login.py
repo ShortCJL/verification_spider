@@ -8,13 +8,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
-from fuxinScrapy.zheye import zheye
+from zheye import zheye
 from mouse import move,click
-BORDER = 6
+
 
 # 填写知乎的账号与密码
-account = '15611885353'
-password = 'zhaijiawasdfgh1'
+account = '123456'
+password = '123456'
 
 class CrackZhiHu():
     def __init__(self):
@@ -26,7 +26,7 @@ class CrackZhiHu():
         options.add_experimental_option('excludeSwitches', ['enable-automation'])
 
         self.browser = webdriver.Chrome(
-            executable_path="E:\\project_python\\fuxinScrapy\\fuxinScrapy\\static\\chromedriver2.exe",
+            executable_path="chromedriver2.exe",
             chrome_options=options)
 
         self.wait = WebDriverWait(self.browser, 3)
